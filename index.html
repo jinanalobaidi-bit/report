@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>نشرة السوق</title>
+
+<style>
+body {
+    margin: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+/* كل صورة = صفحة */
+.page {
+    width: 210mm;
+    height: 297mm;
+    margin: auto;
+    page-break-after: always;
+}
+
+/* الصورة تملأ الصفحة */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* إعدادات الطباعة */
+@media print {
+    body {
+        margin: 0;
+    }
+
+    .page {
+        margin: 0;
+        page-break-after: always;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+    <img src="1.png">
+</div>
+
+<div class="page">
+    <img src="2.png">
+</div>
+
+<div class="page">
+    <img src="3.png">
+</div>
+
+<div class="page">
+    <img src="4.png">
+</div>
+
+</body>
+</html>
