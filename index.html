@@ -26,22 +26,27 @@ button {
     z-index: 1000;
 }
 
-/* كل صورة = صفحة */
+/* كل صفحة A4 */
 .page {
     width: 210mm;
     height: 297mm;
-    margin: auto;
+    margin: 0 auto;
     page-break-after: always;
 }
 
-/* الصورة تملأ الصفحة */
+/* الصورة تملأ الصفحة بدون فراغ */
 img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 /* إعدادات الطباعة */
+@page {
+    size: A4;
+    margin: 0;
+}
+
 @media print {
     button {
         display: none;
